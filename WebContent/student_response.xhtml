@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<title>Student Form - Response</title>
+</h:head>
+<h:body>
+	
+		Hello, #{student.firstName} #{student.lastName} <br />
+		Country: #{student.country}  <br />
+		Programming language: #{student.programmingLanguage} <br />
+		Favorite programming languages: 
+		<ul>		
+			<ui:repeat var="tempFav" value="#{student.favoriteProgLanguages}">
+				<li>#{tempFav}</li>
+			</ui:repeat>
+		</ul>
+
+</h:body>
+
+</html>
