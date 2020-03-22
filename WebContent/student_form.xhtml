@@ -6,12 +6,27 @@
     
 	<h:head>
 	  <title>Student Registration Form</title>
+	  <style>
+			.error {color:red}
+	  </style>
 	</h:head>	
 	<h:body>
 		<h:form>
-			First Name: <h:inputText id="fistname" value="#{student.firstName}"/>
+<!-- 			<h:messages styleClass="error"/>
+ -->		
+			First Name: <h:inputText value="#{student.firstName}" 
+									 label="First Name" 
+									 required="true"
+									 id="first_name"
+									 requiredMessage="Please enter your first name"/>
+			<h:message for="first_name" styleClass="error"/>
 			<br/><br/>
-			Last Name: <h:inputText id="lastname" value="#{student.lastName}"/>
+			Last Name: <h:inputText value="#{student.lastName}" 
+									label="Last Name" 
+									required="true"
+									id="last_name"
+									requiredMessage="Please enter your last name"/>
+			<h:message for="last_name" styleClass="error"/>
 			<br/><br/>
 			Country:
 			<h:selectOneMenu value="#{student.country}">
